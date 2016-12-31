@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="my_main">我的</string>
+    <string name="my_firend">好友</string>
+    <string name="my_start">START</string>
+    <string name="my_firend_state">好友动态</string>
+    <string name="my_setting">设置</string>
+    <string name="welcome_to_main">和我一起跑</string>
+</resources>

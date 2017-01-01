@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -16,6 +17,7 @@ import com.wangyang.android.fragment.MainFragment;
 import com.wangyang.android.fragment.RunFragment;
 import com.wangyang.android.fragment.SettingFragment;
 import com.wangyang.android.fragment.StateFragment;
+import com.wangyang.android.widget.TopBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +29,7 @@ public class MainActivity extends FragmentActivity {
     private List<BaseFragment> mBaseFragmentList = new ArrayList<BaseFragment>();
     private int mPosition;
     private Fragment mContext;
+    private TopBar mTopBar;
     private final String TAG = "MainActivity";
 
     @Override
@@ -35,10 +38,11 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         initView();
         initFragment();
-
     }
 
     private void initView() {
+        mTopBar = (TopBar)findViewById(R.id.topbar);
+
         if(mBaseFragmentList != null){
             mBaseFragmentList.clear();
         }
@@ -59,6 +63,31 @@ public class MainActivity extends FragmentActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.add(R.id.frame_layout, mBaseFragmentList.get(0)).commit();
         mContext = mBaseFragmentList.get(0);//初始化
+        TopBarListener(mPosition);
+    }
+
+    private void TopBarListener(int position){
+        switch (position){
+            case 0:
+                mTopBar.mLeftImageButton.setVisibility(View.INVISIBLE);
+                mTopBar.mRightImageButton.setVisibility(View.INVISIBLE);
+                mTopBar.mTitleText.setText("Verse Part");
+                break;
+//            case 1:
+//                break;
+//            case 2:
+//                break;
+//            case 3:
+//                break;
+            case 4:
+                mTopBar.mLeftImageButton.setVisibility(View.INVISIBLE);
+                break;
+            default:
+                mTopBar.mLeftImageButton.setVisibility(View.VISIBLE);
+                mTopBar.mRightImageButton.setVisibility(View.VISIBLE);
+                mTopBar.mTitleText.setText("RUN");
+                break;
+        }
     }
 
     private class ChangeListener implements RadioGroup.OnCheckedChangeListener{
@@ -85,6 +114,7 @@ public class MainActivity extends FragmentActivity {
                     mPosition = 0;
                     break;
             }
+            TopBarListener(mPosition);
             BaseFragment baseFragment = mBaseFragmentList.get(mPosition);
             switchFragment(mContext, baseFragment);
         }

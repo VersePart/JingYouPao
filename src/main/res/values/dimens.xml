@@ -3,4 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="guide_button">22dp</dimen>
+    <dimen name="topbar_height">40dp</dimen>
+    <dimen name="topbar_margin">5dp</dimen>
+    <dimen name="topbar_title_text">22sp</dimen>
 </resources>

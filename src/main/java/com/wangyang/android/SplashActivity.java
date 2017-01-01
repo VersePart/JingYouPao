@@ -32,7 +32,7 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
         Boolean ifFirst = SPutils.getBoolean(getApplicationContext(), MyConstantConfig.FIRST_OPEN);
-        if(true){
+        if(!ifFirst){
             SPutils.putBoolean(getApplicationContext(), MyConstantConfig.FIRST_OPEN, true);
             Intent intent = new Intent(this, GuideActivity.class);
             startActivity(intent);

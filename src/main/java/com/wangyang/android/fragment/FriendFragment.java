@@ -16,16 +16,16 @@ public class FriendFragment extends BaseFragment {
     private static final String TAG = "FriendFragment";
 
 
-    @Override
-    public View initView() {
-        Log.i(TAG, " 222");
-        TextView view = new TextView(mContext);
-        view.setText("222");
-        return view;
-    }
+//    @Override
+//    public View initView() {
+//        Log.i(TAG, " 222");
+//        TextView view = new TextView(mContext);
+//        view.setText("222");
+//        return view;
+//    }
 
-    @Override
-    public void initData() {
-        super.initData();
-    }
+//    @Override
+//    public void initData() {
+//        super.initData();
+//    }
 }

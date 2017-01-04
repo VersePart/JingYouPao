@@ -13,18 +13,19 @@ import com.wangyang.android.base.BaseFragment;
 
 public class MainFragment extends BaseFragment {
 
+
     private static final String TAG = "MainFragment";
 
-    @Override
-    public View initView() {
-        Log.i(TAG, " 111");
-        TextView view = new TextView(mContext);
-        view.setText("111");
-        return view;
-    }
+//    @Override
+//    public View initView() {
+//        Log.i(TAG, " 111");
+//        TextView view = new TextView(mContext);
+//        view.setText("111");
+//        return view;
+//    }
 
-    @Override
-    public void initData() {
-        super.initData();
-    }
+//    @Override
+//    public void initData() {
+//        super.initData();
+//    }
 }

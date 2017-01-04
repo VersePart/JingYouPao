@@ -4,10 +4,7 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.wangyang.android.widget.TopBar
-        android:id="@+id/topbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/topbar_height" />
+    <include layout="@layout/topbar"/>
 
     <FrameLayout
         android:id="@+id/frame_layout"

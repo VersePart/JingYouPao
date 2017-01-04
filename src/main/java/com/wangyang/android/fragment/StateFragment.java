@@ -15,16 +15,16 @@ public class StateFragment extends BaseFragment {
 
     private static final String TAG = "StateFragment";
 
-    @Override
-    public View initView() {
-        Log.i(TAG, " 444");
-        TextView view = new TextView(mContext);
-        view.setText("444");
-        return view;
-    }
-
-    @Override
-    public void initData() {
-        super.initData();
-    }
+//    @Override
+//    public View initView() {
+//        Log.i(TAG, " 444");
+//        TextView view = new TextView(mContext);
+//        view.setText("444");
+//        return view;
+//    }
+//
+//    @Override
+//    public void initData() {
+//        super.initData();
+//    }
 }

@@ -15,16 +15,16 @@ public class RunFragment extends BaseFragment {
 
     private static final String TAG = "RunFragment";
 
-    @Override
-    public View initView() {
-        Log.i(TAG, " 333");
-        TextView view = new TextView(mContext);
-        view.setText("333");
-        return view;
-    }
-
-    @Override
-    public void initData() {
-        super.initData();
-    }
+//    @Override
+//    public View initView() {
+//        Log.i(TAG, " 333");
+//        TextView view = new TextView(mContext);
+//        view.setText("333");
+//        return view;
+//    }
+//
+//    @Override
+//    public void initData() {
+//        super.initData();
+//    }
 }

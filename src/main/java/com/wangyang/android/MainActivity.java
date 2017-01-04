@@ -1,5 +1,6 @@
 package com.wangyang.android;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -11,6 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.wangyang.android.base.BaseActivity;
 import com.wangyang.android.base.BaseFragment;
 import com.wangyang.android.fragment.FriendFragment;
 import com.wangyang.android.fragment.MainFragment;
@@ -69,6 +71,7 @@ public class MainActivity extends FragmentActivity {
     private void TopBarListener(int position){
         switch (position){
             case 0:
+
                 mTopBar.mLeftImageButton.setVisibility(View.INVISIBLE);
                 mTopBar.mRightImageButton.setVisibility(View.INVISIBLE);
                 mTopBar.mTitleText.setText("Verse Part");
@@ -81,6 +84,7 @@ public class MainActivity extends FragmentActivity {
 //                break;
             case 4:
                 mTopBar.mLeftImageButton.setVisibility(View.INVISIBLE);
+                mTopBar.mTitleText.setText(R.string.settings_munch);
                 break;
             default:
                 mTopBar.mLeftImageButton.setVisibility(View.VISIBLE);

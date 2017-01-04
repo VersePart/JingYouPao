@@ -6,4 +6,6 @@
     <dimen name="topbar_height">40dp</dimen>
     <dimen name="topbar_margin">5dp</dimen>
     <dimen name="topbar_title_text">22sp</dimen>
+    <dimen name="setting_margin">5dp</dimen>
+    <dimen name="setting_text">20sp</dimen>
 </resources>

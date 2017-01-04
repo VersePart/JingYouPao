@@ -5,5 +5,7 @@ package com.wangyang.android.api;
  */
 
 public class MyConstantConfig {
+
     public static final String FIRST_OPEN = "first_open";
+    public static final String BT_PWD_EYE = "bt_pwd_eye";
 }

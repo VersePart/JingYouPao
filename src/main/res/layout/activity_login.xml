@@ -66,16 +66,8 @@
             android:layout_below="@id/username_layout"
             android:layout_marginTop="6dp"
             android:gravity="center" >
-            <EditText
-            android:id="@+id/password"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:inputType="textPassword"
-            android:paddingRight="60dp"
-            android:maxLength="20"
-            android:paddingLeft="55dp" >
-        </EditText>
-        <ImageView
+
+            <ImageView
             android:layout_width="24dp"
             android:layout_height="22dp"
             android:layout_marginStart="7dp"
@@ -98,7 +90,17 @@
             android:layout_gravity="right|center_vertical"
             android:layout_marginRight="33dp"
             />
-    </FrameLayout>
+
+            <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:paddingRight="60dp"
+            android:maxLength="20"
+            android:paddingLeft="55dp" >
+        </EditText>
+        </FrameLayout>
     </RelativeLayout>
 
     <Button
@@ -106,8 +108,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/log_in"
+        android:layout_marginTop="21dp"
         android:layout_below="@+id/user_log_layout"
-        android:layout_marginTop="20dp"/>
+        android:layout_alignStart="@+id/register_btn" />
 
     <Button
         android:id="@+id/register_btn"
